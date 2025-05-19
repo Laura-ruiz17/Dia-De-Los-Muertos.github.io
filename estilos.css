@@ -1,0 +1,267 @@
+body { 
+    background-color: black;
+    color: white;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.papel-picado {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.papel-picado img {
+    width: 500px;
+    height: auto;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center; 
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: underline; 
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+
+.bienvenida {
+    background-color: white;
+    color: black;
+    padding: 100px;
+    margin: 100px auto;
+    width: 70%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.bienvenida h2 {
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.imagenes img {
+    width: 45%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagenes img:hover {
+    transform: scale(1.03);
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .navbar a {
+        font-size: 24px;
+        padding: 8px 10px;
+    }
+
+    .papel-picado img {
+        width: 90px;
+    }
+
+    .bienvenida {
+        width: 90%;
+        padding: 30px;
+        margin: 40px auto;
+        text-align: center;
+    }
+
+    .bienvenida h2 {
+        font-size: 22px;
+    }
+
+    .imagenes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagenes img {
+        width: 100%;
+    }
+}
+.slider-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slider-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider-title h2 {
+    color: #333;
+    font-size: 2rem;
+    font-style: italic;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.slideshow {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 10px solid white;
+    box-shadow: 0 0 0 1px #ddd, 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.7);
+    user-select: none;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.dots-container {
+    text-align: center;
+    padding: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .slider-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mySlides img {
+        max-height: 300px;
+        border-width: 5px;
+    }
+    
+    .prev, .next {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
